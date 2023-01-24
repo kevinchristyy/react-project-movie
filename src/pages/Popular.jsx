@@ -5,7 +5,6 @@ import React, { useEffect, useState } from "react";
 function Popular() {
   const [popMovies, setPopMovies] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [duplicate] = useState('')
 
   const API_IMG = "https://www.themoviedb.org/t/p/w220_and_h330_face/";
 
@@ -51,7 +50,7 @@ function Popular() {
                       ))
                     : popMovies.map((movie, index) => {
                         return (
-                          <div className="movie" key={index}>
+                          <div className="movie" key={index} movie={movie}>
                             <figure>
                               <img
                                 src={API_IMG + movie.poster_path}

@@ -4,31 +4,27 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import StrymLogo from "../assets/Strym.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-function Nav() {
-  const { movieText } = useParams();
+function Header() {
   const navigate = useNavigate();
-  const { movieName } = useParams();
   const [movies, setMovies] = useState([]);
   const [searchMovie, setSearchMovie] = useState("");
+  const { id } = useParams();
 
   function onSearch() {
     fetchMovies(searchMovie);
     navigate("/search");
   }
 
-  async function fetchMovies(movieid) {
-    const { data } = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=5972b76292067c64f204c909b96a79f0&include_adult=false&query=${
-        movieid || movieText
-      }&page=1`
-    );
-    console.log(data)
+  async function fetchMovies() {
+    const { data } = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=5972b76292067c64f204c909b96a79f0&include_adult=false&query=${id}&page=1`);
     setMovies(data.results);
   }
 
   useEffect(() => {
     fetchMovies();
   }, []);
+
+
 
   return (
     <nav>
@@ -48,9 +44,6 @@ function Nav() {
             <button onClick={() => onSearch()} className="search__button">
               <FontAwesomeIcon icon="magnifying-glass" className="glass" />
             </button>
-            {movies.map((movie => {
-                return <h2>{movie.title}</h2>
-            }))}
           </form>
         </div>
       </div>
@@ -58,4 +51,4 @@ function Nav() {
   );
 }
 
-export default Nav;
+export default Header;

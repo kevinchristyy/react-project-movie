@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
-import Nav from "./components/Nav";
+import Header from "./components/Header";
 import Popular from "./pages/Popular";
 import Home from "./pages/Home";
 import Latest from "./pages/Latest";
@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Nav />
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/popular" element={<Popular />} />
