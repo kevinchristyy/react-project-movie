@@ -458,15 +458,15 @@ footer {
   }
 
   .search__field {
-    display: block;
+    display: flex;
   }
 
   .search__input {
-    width: 320px;
+    width: 220px;
   }
 
   .search__button {
-    display: none;
+    width: 55px;
   }
 
   .highlight {
