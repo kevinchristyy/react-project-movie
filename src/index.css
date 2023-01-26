@@ -459,6 +459,7 @@ footer {
 
   .search__field {
     display: flex;
+    margin-right: 36px;
   }
 
   .search__input {
@@ -467,6 +468,10 @@ footer {
 
   .search__button {
     width: 55px;
+  }
+
+  .cinema__img {
+    width: 280px;
   }
 
   .highlight {
