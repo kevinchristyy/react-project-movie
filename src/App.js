@@ -15,7 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/popular" element={<Popular />} />
           <Route path="/latest" element={<Latest />} />
-          <Route path="/search" element={<MovieSearch />} />
+          <Route path="/search/:searchMovie" element={<MovieSearch />} />
         </Routes>
         <Footer />
       </div>

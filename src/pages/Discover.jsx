@@ -1,10 +1,7 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CinemaSeat from "../assets/cinemaseat.svg";
 
 function Discover() {
-
   return (
     <section id="search">
       <div className="search__page">
@@ -14,11 +11,18 @@ function Discover() {
               Lots of <span className="purple">Strym</span>'s to discover.
               <br />
               <div className="header__description sub-description">
-              <h2>What are you waiting for? Start <span className="purple">Strym</span>-ing</h2>
+                <h2>
+                  What are you waiting for? Start{" "}
+                  <span className="purple">Strym</span>-ing
+                </h2>
               </div>
               <div>
-              <Link to='/popular' className="categories__description"><span>Popular</span></Link>
-              <Link to='/latest' className="categories__description"><span>Latest</span></Link>
+                <Link to="/popular" className="categories__description">
+                  <span>Popular</span>
+                </Link>
+                <Link to="/latest" className="categories__description">
+                  <span>Latest</span>
+                </Link>
               </div>
             </h1>
           </div>

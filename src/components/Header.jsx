@@ -6,17 +6,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Header() {
   const navigate = useNavigate();
-  const [movies, setMovies] = useState([]);
+  const [, setMovies] = useState([]);
   const [searchMovie, setSearchMovie] = useState("");
-  const { id } = useParams();
+  const { title } = useParams();
 
   function onSearch() {
-    fetchMovies(searchMovie);
-    navigate("/search");
+    navigate("/search/" + searchMovie);
   }
 
   async function fetchMovies() {
-    const { data } = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=5972b76292067c64f204c909b96a79f0&include_adult=false&query=${id}&page=1`);
+    const { data } = await axios.get(
+      `https://api.themoviedb.org/3/search/movie?api_key=5972b76292067c64f204c909b96a79f0&include_adult=false&query=${title}&page=1`
+    );
     setMovies(data.results);
   }
 
@@ -24,16 +25,14 @@ function Header() {
     fetchMovies();
   }, []);
 
-
-
   return (
     <nav>
       <div className="nav__container">
         <Link to="/">
-          <img className="logo" src={StrymLogo} alt="" />
+          <img className="logo__nav" src={StrymLogo} alt="" />
         </Link>
         <div className="search__field">
-          <form action="">
+          <form>
             <input
               type="text"
               placeholder="Search Movies..."
@@ -41,7 +40,7 @@ function Header() {
               value={searchMovie}
               onChange={(e) => setSearchMovie(e.target.value)}
             />
-            <button onClick={() => onSearch()} className="search__button">
+            <button disabled={!searchMovie} onClick={() => onSearch()} className="search__button">
               <FontAwesomeIcon icon="magnifying-glass" className="glass" />
             </button>
           </form>
