@@ -40,7 +40,11 @@ function Header() {
               value={searchMovie}
               onChange={(e) => setSearchMovie(e.target.value)}
             />
-            <button disabled={!searchMovie} onClick={() => onSearch()} className="search__button">
+            <button
+              disabled={!searchMovie}
+              onClick={() => onSearch()}
+              className="search__button"
+            >
               <FontAwesomeIcon icon="magnifying-glass" className="glass" />
             </button>
           </form>
