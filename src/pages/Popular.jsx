@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CustomSkeleton from "../components/CustomSkeleton";
 import MovieCard from "../components/MovieCard";
+import "aos/dist/aos.css";
 
 function Popular() {
   const [popMovies, setPopMovies] = useState([]);
@@ -30,8 +31,17 @@ function Popular() {
             <div className="movies__container">
               <div className="row">
                 <div className="movies__header">
-                  <h2 className="section__title movies__header--title">
-                    <Link to="/" className="arrow__left">
+                  <h2
+                    className="section__title movies__header--title"
+                    data-aos="fade-in"
+                    data-aos-delay="500"
+                  >
+                    <Link
+                      to="/"
+                      className="arrow__left"
+                      data-aos="fade-in"
+                      data-aos-delay="750"
+                    >
                       <FontAwesomeIcon icon="fa-solid fa-arrow-left-long" />
                     </Link>
                     Popular Movies

@@ -27,14 +27,23 @@ function Latest() {
       <div className="movies__body">
         <main id="movies__main">
           <section>
-            <div className="movies__container--latest">
+            <div className="movies__container--full">
               <div className="row">
                 <div className="movies__header">
-                  <h2 className="section__title movies__header--title">
-                    <Link to="/" className="arrow__left">
+                  <h2
+                    className="section__title movies__header--title"
+                    data-aos="fade-in"
+                    data-aos-delay="500"
+                  >
+                    <Link
+                      to="/"
+                      className="arrow__left"
+                      data-aos="fade-in"
+                      data-aos-delay="750"
+                    >
                       <FontAwesomeIcon icon="fa-solid fa-arrow-left-long" />
                     </Link>
-                    Latest Movies
+                    Latest
                   </h2>
                 </div>
                 <div className="movies">

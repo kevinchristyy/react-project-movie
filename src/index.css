@@ -222,7 +222,7 @@ button:active {
   max-height: 200%;
 }
 
-.movies__container--latest {
+.movies__container--full {
   height: calc(100vh);
 }
 
@@ -343,6 +343,12 @@ button:active {
   background-color: #242424;
   margin-top: 16px;
   height: 20px;
+}
+
+/* MOVIEINFO */
+
+.movie__selected {
+  
 }
 
 /* FOOTER */

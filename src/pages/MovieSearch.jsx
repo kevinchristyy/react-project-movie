@@ -31,9 +31,17 @@ function MovieSearch() {
             <div className="movies__container">
               <div className="row">
                 <div className="movies__header">
-                  <h2 className="section__title movies__header--title">
+                  <h2
+                    className="section__title movies__header--title"
+                    data-aos="fade-in"
+                    data-aos-delay="500"
+                  >
                     <Link to="/" className="arrow__left">
-                      <FontAwesomeIcon icon="fa-solid fa-arrow-left-long" />
+                      <FontAwesomeIcon
+                        icon="fa-solid fa-arrow-left-long"
+                        data-aos="fade-in"
+                        data-aos-delay="750"
+                      />
                     </Link>
                     SearchResults for{" "}
                     <span className="purple">{searchMovie}</span>
