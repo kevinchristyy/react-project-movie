@@ -7,10 +7,12 @@ import {
   faMagnifyingGlass,
   faThumbsUp,
   faArrowLeftLong,
+  faCalendarDays,
+  faClock,
 } from "@fortawesome/free-solid-svg-icons";
 import { library } from "@fortawesome/fontawesome-svg-core";
 
-library.add(faMagnifyingGlass, faThumbsUp, faArrowLeftLong);
+library.add(faMagnifyingGlass, faThumbsUp, faArrowLeftLong, faCalendarDays, faClock);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

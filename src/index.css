@@ -23,6 +23,10 @@ nav {
   background-color: #110b24;
 }
 
+a {
+  text-decoration: none;
+}
+
 ul {
   display: flex;
 }
@@ -42,6 +46,15 @@ h2 {
   font-size: 32px;
   margin-bottom: 32px;
   text-align: center;
+  color: #fff;
+}
+
+h3 {
+  color: #fff;
+}
+
+p {
+  color: #fff;
 }
 
 img {
@@ -278,6 +291,7 @@ button:active {
 .movie__title {
   font-size: 18px;
   margin-bottom: 8px;
+  text-decoration: none;
 }
 
 .movie__title--link {
@@ -293,9 +307,10 @@ button:active {
 }
 
 .movie__language {
-  padding: 4px;
+  padding: 8px;
   background-color: #110b24;
   border-radius: 4px;
+  color: #fff;
 }
 
 .ranking {
@@ -348,7 +363,122 @@ button:active {
 /* MOVIEINFO */
 
 .movie__selected {
-  
+  display: flex;
+}
+
+.movie__selected--figure {
+  width: 40%;
+  padding: 16px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie__selected--img {
+  height: 575px;
+  width: auto;
+  max-width: 100%;
+}
+
+.movie__selected--title {
+  margin-bottom: 8px;
+  font-size: 56px;
+  text-align: left;
+}
+
+.movie__details--movieinfo {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  text-transform: uppercase;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.movie__tagline {
+  margin: 24px 0px;
+  font-size: 24px;
+  color: #8B64D4;
+  font-style: italic;
+}
+
+.fa-clock {
+  margin: 0 6px 0 8px;
+}
+
+.movie__runtime {
+  color: #fff;
+  margin-right: 24px;
+}
+
+.movie__language--movieinfo {
+  padding: 6px;
+  background-color: #fff;
+  border-radius: 4px;
+  color:#110b24;
+  margin-right: 16px;
+  font-weight: bold;
+}
+
+.movie__year {
+  color: #fff;
+}
+
+.fa-calendar-days {
+  color: white;
+  margin: 0 6px 0 8px;
+}
+
+.movie__info {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie__selected--description {
+  width: 60%;
+  padding: 16px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.movie__summary {
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.movie__summary--para {
+  font-size: 20px;
+  margin-top: 16px;
+}
+
+.movie__actions {
+  width: 220px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn__play {
+  background-color: #9894F3;
+  color: white;
+  padding: 12px 24px;
+  font-size: 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: not-allowed;
+}
+
+.btn__trailer {
+  background-color: #9894F3;
+  color: white;
+  padding: 12px 24px;
+  font-size: 20px;
+  border-radius: 4px;
+  border: none;
+  cursor: not-allowed;
 }
 
 /* FOOTER */
@@ -391,7 +521,7 @@ footer {
 
 .row {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 24px;
 }

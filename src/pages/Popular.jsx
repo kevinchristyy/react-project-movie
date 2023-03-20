@@ -37,7 +37,7 @@ function Popular() {
                     data-aos-delay="500"
                   >
                     <Link
-                      to="/"
+                      to={"/"}
                       className="arrow__left"
                       data-aos="fade-in"
                       data-aos-delay="750"

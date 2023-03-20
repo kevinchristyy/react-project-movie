@@ -31,6 +31,7 @@ function App() {
     mirror: false, // whether elements should animate out while scrolling past them
     anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
   });
+
   return (
     <Router>
       <div className="App">
@@ -40,7 +41,7 @@ function App() {
           <Route path="/popular" element={<Popular />} />
           <Route path="/latest" element={<Latest />} />
           <Route path="/search/:searchMovie" element={<MovieSearch />} />
-          <Route path="/movie/" element={<MovieInfo />} />
+          <Route path="/movie/:id" element={<MovieInfo />} />
         </Routes>
         <Footer />
       </div>
